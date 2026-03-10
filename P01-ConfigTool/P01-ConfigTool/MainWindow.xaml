@@ -29,6 +29,7 @@
                    VerticalAlignment="Center"
                    Foreground="#995C68"/>
         <DataGrid Grid.Row="1"
+                  Name="ConfigurationsDisplay"
                   Padding="10"
                   Background="Transparent"
                   Height="300"
