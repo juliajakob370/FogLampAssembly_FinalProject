@@ -2,12 +2,13 @@
 // FILE          : MainWindow.xaml.cs
 // PROJECT       : Project ManufacturingP01 - ConfigTool (Milestone 1)
 // PROGRAMMER    : Bibi Murwared
-// FIRST VERSION : 2026-03-10
+// FIRST VERSION : 2026-03-11
 // DESCRIPTION   : Code-behind for the configuration tool. Uses ADO.NET
 //                 to load, add, edit, delete and reset configuration values
 //                 stored in the Jubi database Configuration table.
 //------------------------------------------------------------------------------
 //https://learn.microsoft.com/en-us/dotnet/desktop/wpf/data/how-to-create-and-bind-to-an-observablecollection
+//https://learn.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlcommand.executescalar?view=netframework-4.8.1
 using Microsoft.Data.SqlClient;
 using System.Collections.ObjectModel;
 using System.Configuration;

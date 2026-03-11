@@ -2,9 +2,8 @@
  * FILE          : P01_ConfigTableCreation&InitialValues
  * PROJECT       : P01 - Configuration Table Creation
  * PROGRAMMER    : Julia Jakob  & Bibi Murwared
- * DESCRIPTION   : This script creates the Configuration Table with all of it's properties
+ * DESCRIPTION   : Defines a stored procedure that clears the Configuration table and reloads it with the default simulation and bin settings.
  */
-USE Jubi;
 GO
 
 CREATE OR ALTER PROCEDURE ResetConfigurationToDefaults
