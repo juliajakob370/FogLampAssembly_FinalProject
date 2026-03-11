@@ -12,7 +12,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P01_ConfigTool"
         mc:Ignorable="d"
-        Title="ConfigTool" Height="500" Width="600">
+        Title="ConfigTool" Height="500" Width="600" ResizeMode="CanResize">
     <Grid Background="#FFEFEB">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -35,6 +35,7 @@
                    FontFamily="Consolas"
                    BorderThickness="0"
                    ToolTip="Reset values to defaults!"
+
                    />
             <TextBlock Grid.Column="1"
                        Name="TitleText"
@@ -58,20 +59,32 @@
                     />
 
         </Grid>
-       
-        <DataGrid Grid.Row="1"
-                  Name="ConfigurationsDisplay"
-                  Padding="10"
-                  Background="#B5838D"
-                  Height="300"
-                  Width="550"
-                  ScrollViewer.VerticalScrollBarVisibility="Auto"
-                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                  FontSize="15"
-                  FontFamily="Lucida Console"
-                  BorderThickness="0"
-            />
 
+        <DataGrid Grid.Row="1"
+          Name="ConfigurationsDisplay"
+          AutoGenerateColumns="False"
+          CanUserAddRows="False"
+          SelectionMode="Single"
+          SelectionChanged="ConfigurationsDisplay_SelectionChanged"
+          Padding="10"
+          Background="#B5838D"
+          Height="300"
+          Width="550"
+          ScrollViewer.VerticalScrollBarVisibility="Auto"
+          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+          FontSize="15"
+          FontFamily="Lucida Console"
+          BorderThickness="0">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ConfigID}" Width="50"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding ConfigName}" Width="*"/>
+                <DataGridTextColumn Header="Value" Binding="{Binding ConfigValue}" Width="*"/>
+                <DataGridTextColumn Header="Type" Binding="{Binding DataType}" Width="*"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="2*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
