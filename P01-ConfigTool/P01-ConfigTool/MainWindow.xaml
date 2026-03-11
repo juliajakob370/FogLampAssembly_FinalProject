@@ -62,16 +62,72 @@
         <DataGrid Grid.Row="1"
                   Name="ConfigurationsDisplay"
                   Padding="10"
-                  Background="Transparent"
+                  Background="#B5838D"
                   Height="300"
                   Width="550"
                   ScrollViewer.VerticalScrollBarVisibility="Auto"
                   ScrollViewer.HorizontalScrollBarVisibility="Auto"
                   FontSize="15"
                   FontFamily="Lucida Console"
-                  CanUserAddRows="False"
-                  RowValidationErrorTemplate="{x:Null}"
+                  BorderThickness="0"
             />
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"
+                    Name="Close"
+                    Click="Close_Click"
+                    Background="#6D6875"
+                    Foreground="#FFEFEB"
+                    Content="CLOSE"
+                    FontSize="20"
+                    Height="35"
+                    Width="100"
+                    HorizontalAlignment="Center"
+                    FontWeight="Bold"
+                    FontFamily="Consolas"
+                    BorderThickness="0"
+                    ToolTip="Close config tool"
+                    />
+            <Button Grid.Column="2"
+                    Name="DeleteButton"
+                    Click="Delete_Click"
+                    Background="#FFEFEB"
+                    Foreground="#E5989B"
+                    BorderBrush="#E5989B"
+                    Content="🗑️"
+                    FontSize="20"
+                    Height="35"
+                    Width="60"
+                    HorizontalAlignment="Left"
+                    FontFamily="Consolas"
+                    BorderThickness="3"
+                    ToolTip="Delete Selected Row"
+                    IsEnabled="False"
+                    />
+            <Button Grid.Column="2"
+                    Name="SaveButton"
+                    Click="Save_Click"
+                    Background="#6D6875"
+                    Foreground="#FFEFEB"
+                    Content="SAVE"
+                    FontSize="20"
+                    Height="35"
+                    Width="100"
+                    HorizontalAlignment="Center"
+                    FontWeight="Bold"
+                    FontFamily="Consolas"
+                    BorderThickness="0"
+                    ToolTip="Save Configurations"
+                    />
+            
+        </Grid>
+        
+        
 
     </Grid>
 </Window>
